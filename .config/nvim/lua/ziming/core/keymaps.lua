@@ -21,3 +21,18 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+
+keymap.set(
+  "n",
+  "<esc>h",
+  "<C-w>h",
+  { noremap = true, silent = true, desc = "Move focus to the window left of current" }
+)
+keymap.set("n", "<esc>j", "<C-w>j", { noremap = true, silent = true, desc = "Move focus to the window below current" })
+keymap.set("n", "<esc>k", "<C-w>k", { noremap = true, silent = true, desc = "Move focus to the window above current" })
+keymap.set(
+  "n",
+  "<esc>l",
+  "<C-w>l",
+  { noremap = true, silent = true, desc = "Move focus to the window right of current" }
+)
