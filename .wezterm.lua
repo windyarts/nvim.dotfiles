@@ -20,7 +20,7 @@ config.colors = {
 }
 
 -- config.font = wezterm.font("MesloLGS Nerd Font")
-config.font = wezterm.font("CaskaydiaMono Nerd Font")
+config.font = wezterm.font("Maple Mono NF CN")
 config.font_size = 18
 
 config.enable_tab_bar = false
