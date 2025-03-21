@@ -1,0 +1,72 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+""" restrict ideavim to only enabled in main editor
+"set ideavimsupport=
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Do smart case. These have to be set together to effect.
+set ignorecase
+set smartcase
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" EasyMotion
+Plug 'easymotion/vim-easymotion'
+" NERDTree
+Plug 'preservim/nerdtree'
+" Which-Key
+"set which-key
+"set notimeout
+"let g:WhichKey_ShowVimActions = "true"
+"let g:WhichKey_DefaultDelay = 600
+" Surround
+Plug 'tpope/vim-surround'
+" Quick Scope, highlight characters when searching with f & t
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" Peekaboo
+set peekaboo
+" Shift-J to join multiple lines
+set ideajoin
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+nmap <leader>1 <Action>(QuickJavaDoc)
+nmap <leader>2 <Action>(ShowErrorDescription)
+nmap <leader>6 <Action>(RenameElement)
+nmap gf <Action>(GotoImplementation)
+nmap gn <Action>(GotoNextElementUnderCaretUsage)
+nmap gN <Action>(GotoPrevElementUnderCaretUsage)
+nmap <leader>ee :NERDTree<CR>
+nmap s <Plug>(easymotion-s)
+map U <C-R>
